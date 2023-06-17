@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "admin",
+    "password": "12345678",
+    "database": "db_ovo",
+    "host": "ovo-db.cxegj3mo1asl.ap-southeast-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "admin",
+    "password": "12345678",
+    "database": "db_ovo",
+    "host": "ovo-db.cxegj3mo1asl.ap-southeast-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "admin",
+    "password": "12345678",
+    "database": "db_ovo",
+    "host": "ovo-db.cxegj3mo1asl.ap-southeast-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}
