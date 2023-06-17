@@ -7,7 +7,7 @@ module.exports = {
                const transactionDone = await TransactionDone.findAll();
 
                res.status(200).json({
-                    message: 'Sukses menampilkan semua data transaksi sukses',
+                    message: 'Sukses menampilkan semua data transaksi selesai',
                     data:transactionDone,
                });
           } catch (err){
@@ -21,7 +21,7 @@ module.exports = {
                          "id",
                          "money_balance",
                          "pin",
-                         "user_name",
+                         "virtual_account",
                          "phone_number",
                          "total_price",
                          "status",
@@ -66,7 +66,7 @@ module.exports = {
                          transaction_done_date: transaction_date,
                          id_user: data[i].id,
                          money_balance: balance[1],
-                         user_name: data[i].user_name,
+                         virtual_account: data[i].virtual_account,
                          phone_number: data[i].phone_number,
                          total_price: data[i].total_price,
                          status: balance[0],

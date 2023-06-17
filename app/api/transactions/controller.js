@@ -2,18 +2,6 @@ const {Transaction} = require('../../db/models');
 const {Payment} = require('../../db/models');
 
 module.exports = {
-     getAllPayments: async (req, res, next) => {
-          try {
-               const payments = await Payment.findAll();
-
-               res.status(200).json({
-                    message: 'Sukses menampilkan semua data payment',
-                    data: payments
-               });
-          } catch (err){
-               next(err);
-          }
-     },
      getAllTransactions: async (req, res, next) => {
           try {
                const transactions = await Transaction.findAll();
@@ -31,7 +19,7 @@ module.exports = {
                const data = await Payment.findAll({
                     attributes: [
                          "id",
-                         "user_name",
+                         "virtual_account",
                          "phone_number",
                          "total_price",
                          "status",
@@ -53,7 +41,7 @@ module.exports = {
                     Transaction.create({
                          transaction_date: transaction_date,
                          id_payment: data[i].id,
-                         user_name: data[i].user_name,
+                         virtual_account: data[i].virtual_account,
                          phone_number: data[i].phone_number,
                          money_out: data[i].total_price,
                          status: data[i].status,

@@ -19,7 +19,7 @@ module.exports = {
                const data = await Transaction.findAll({
                     attributes: [
                          "id",
-                         "user_name",
+                         "virtual_account",
                          "phone_number",
                          "money_out",
                          "status",
@@ -33,7 +33,7 @@ module.exports = {
                          money_balance: money_balance,
                          pin: pin,
                          id_transaction: data[i].id,
-                         user_name: data[i].user_name,
+                         virtual_account: data[i].virtual_account,
                          phone_number: data[i].phone_number,
                          total_price: data[i].money_out,
                          status: data[i].status,

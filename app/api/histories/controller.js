@@ -19,6 +19,7 @@ module.exports = {
                const data = await TransactionDone.findAll({
                     attributes: [
                          "id",
+                         "virtual_account",
                          "transaction_done_date",
                          "total_price",
                          "status",
@@ -28,6 +29,7 @@ module.exports = {
                for (i = 0; i < data.length; i++) {
                     History.create({
                          id_transaction_done: data[i].id,
+                         virtual_account_transaction: data[i].virtual_account,
                          transaction_done_date: data[i].transaction_done_date,
                          transaction_amount: data[i].total_price,
                          transaction_status: data[i].status,
@@ -37,9 +39,6 @@ module.exports = {
                     res.send({
                          message: 'Sukses menambahkan data histories',
                     });
-                    // res.status(200).json({
-                    //      message: 'Sukses menambahkan data history',
-                    // });
           } catch (err){
                next(err);
           }

@@ -8,7 +8,6 @@ module.exports = {
                     "https://ecommerceeai.000webhostapp.com/api/payments"
                );
 
-               // const data = JSON.parse(dataCommerce.text);
                const data = dataCommerce.body;;
 
                for(i = 0; i< data.length; i++){
